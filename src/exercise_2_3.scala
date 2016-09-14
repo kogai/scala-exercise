@@ -6,7 +6,7 @@ object exercise_2_3 {
   def main(args: Array[String]): Unit = {
     val c = (a: Int, b: Int) => a.toString() + b.toString()
     val curried = curry(c)
-    println(curryable(1, 2))
+    println(c(1, 2))
     println(curried(1)(2))
   }
 }

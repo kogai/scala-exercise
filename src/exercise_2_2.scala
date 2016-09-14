@@ -1,7 +1,6 @@
 object exercise_2_2 {
   def isSorted[A](as: Array[A], compare: (A, A) => Boolean): Boolean = {
-    if (as.length == 0 || as.length == 1) return true
-    return compare(as(0), as(1)) && isSorted(as.tail, compare)
+    if (as.length == 0 || as.length == 1) true else compare(as(0), as(1)) && isSorted(as.tail, compare)
   }
 
   def main(args: Array[String]): Unit = {
